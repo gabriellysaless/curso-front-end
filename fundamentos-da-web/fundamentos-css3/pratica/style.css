@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5; /* Espaçamento entre linhas */
+  color: #333;
+  background-color: #fff;
+}
+
+header {
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #f5c1ff, #aa17c7cb);
+    color: #fff;
+}
+
+header h1 {
+    margin-top: 5px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+header nav ul li {
+    padding: 10px 15px 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main{
+    max-width: 1160px;
+    margin: auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+section {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+article {
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+article h3 {
+    font-size: 1.3rem;
+}
+
+article h3::before{
+    content: "🔹";
+}
+
+aside {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+aside h4 {
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+a:hover {
+    color: #650179;
+}
+
+footer {
+    text-align: center;
+    color: #838285;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}

@@ -1,0 +1,52 @@
+*{
+    color: #ccc;
+}
+
+.destaque{
+    color: blue;
+}
+
+#mais{
+    color: rgb(0, 204, 204);
+}
+
+ul > li {
+    color: green;
+}
+
+/* SELETOR DE ATRIBUTO */
+[required] {
+    border-color: blueviolet;
+}
+
+/* SELETOR DE ATRIBUTO COM VALOR*/
+[type="text"] {
+    background-color: rgb(134, 134, 134);
+}
+
+/* PSEUDO CLASSES
+    :hover
+    :active
+    :nth-child (odd) impar
+    :nth-child (even) par
+*/
+/* PSEUDO ELEMENTO
+    ::before
+    ::after
+    ::first-letter
+*/
+
+h1::before {
+    content: "⚡";
+}
+
+#mais::after {
+    content: "[Leia mais]";
+    color: blue;
+}
+
+p::first-letter{
+    font-size: 21px;
+    font-weight: bold;
+    color: black;
+}
