@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* alinha na horizontal */
+    align-items: center; /* alinha verticalmente */
+    font-family: Arial, Helvetica, sans-serif;
+    height: 80vh;
+    color: #757575;
+    
+}
+
+main {
+    border: 1.5px solid rgb(98, 205, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 350px;
+}
+
+h1 {
+    color: #0379F8;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.199);
+}
+
+form input, select {
+    display: flex; /* o elemento filho fica com o display flex*/
+    border: 1px solid rgb(62, 168, 218);
+    background-color: #F3FFFF;
+    color: #757575;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px 0px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007CFF;
+    color: white;
+    border-radius: 4px;
+    border: #007CFF;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #006cdf;
+    cursor: pointer;
+}
+
+p {
+    display: flex; /* o elemento filho fica com o display flex*/
+    border: 1px solid rgb(62, 168, 218);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 8px 0px;
+    width: 100%;
+    font-size: 15px;
+    background-color: #F3FFFF;
+}
+
+#total {
+    background-color: #63ADEA;
+    color: white;
+        font-weight: bold;
+
+}
