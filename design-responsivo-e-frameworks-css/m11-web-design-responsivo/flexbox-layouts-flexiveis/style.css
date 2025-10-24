@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: row; /* Já vem como padrão, não precisa colocar */
+    justify-content: center; /* Alinha os itens na horizontal */
+    align-items: center; /* Alinha os itens na vertical */
+    height: 100vh; /* Para ocupar a tela toda e os itens ficarem centralizados */
+}
+
+main {
+    display: flex; /* Tem q colocar para tbm ficar com os padrões */ 
+    gap: 20px; /* Cria espaçamento entre os itens sem o uso do margin */
+}
+
+.blocos {
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+}
+/* Selecionando elementos com base na posição dentro do elemento pai usando :nth-child */
+.blocos:nth-child(1){ 
+    background-color: lightgreen;
+}
+.blocos:nth-child(2){
+    background-color: lightcoral;
+}
+.blocos:nth-child(3){
+    background-color: lightyellow;
+}
