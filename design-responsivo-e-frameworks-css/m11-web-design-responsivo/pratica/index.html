@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACW</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
         <h1>ACW - Agência Criativa Web</h1>
-        <nav>
-            <ul>
+        <span id="burguer" class="material-symbols-outlined">menu</span>
+        <nav id="navMenu">
+            <ul id="menu" class="menu">
                 <li>Home</li>
-                <li>Sobre nós</li>
+                <li>Sobre Nós</li>
                 <li>Serviços</li>
                 <li>Depoimentos</li>
                 <li>Contato</li>
@@ -23,7 +25,7 @@
         <section>
             <h2>Criamos experiências digitais que conectam marcas e pessoas!</h2>
             <p>Na <strong>Agência Criativa Web</strong>, transformamos ideias em presença digital marcante. Design, inovação e estratégia reunidos para impulsionar o seu negócio.</p>
-            <button>Conheça nossos serviços!</button>
+            <button id="btn-servico">Conheça nossos serviços!</button>
         </section>
         
         <section>
@@ -64,8 +66,6 @@
 
   <p>Nosso foco é unir estética e funcionalidade para gerar resultados reais.</p>
 </section>
-
-        
         <section>
             <h2>Depoimentos</h2>
             <p>“A Agência Criativa Web superou todas as expectativas! Nosso site ficou incrível e o atendimento foi impecável.”</p>
@@ -92,15 +92,17 @@
                 <label for="assunto">Assunto</label>
                 <input type="text" id="assunto">
 
-                <label for="mensagem">Mensagem</label>
+                <br><label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" rows="5" cols="33" placeholder="Escreva sua mensagem aqui..." required></textarea>
 
-                <button>Enviar Mensagem</button>
+                <button id="msg">Enviar Mensagem</button>
             </form>
         </section>
     </main>
     <footer>
         <p>Site fictício criado por <a href="https://github.com/gabriellysaless" target="_blank" rel="external"><strong>Gabrielly Sales</strong></a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
