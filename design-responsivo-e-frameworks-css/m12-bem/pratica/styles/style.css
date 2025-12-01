@@ -1,0 +1,148 @@
+/* =============================
+   HEADER (BEM)
+============================= */
+
+.header__menu {
+    padding: 0;
+}
+
+.header__menu-item {
+    display: inline-block;
+    margin-right: 4em;
+    cursor: pointer;
+}
+
+.header__menu-item:hover {
+    color: #fff;
+}
+
+/* =============================
+   HERO
+============================= */
+
+.hero__title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+.hero__text {
+    margin-bottom: 1em;
+}
+
+.button--primary {
+    background-color: #efedff;
+    color: #72094f;
+}
+
+.button--primary:hover {
+    background-color: #cfcaf5;
+}
+
+/* =============================
+   ABOUT
+============================= */
+
+.about__title {
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
+}
+
+.about__text {
+    margin: 0.5em 0;
+}
+
+.about__values {
+    list-style: none;
+    margin-top: 0.8em;
+}
+
+.about__value-item {
+    margin: 0.3em 0;
+}
+
+/* =============================
+   SERVICES
+============================= */
+
+.services__title {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.services__intro,
+.services__text {
+    margin: 0.6em 0;
+}
+
+.services__item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* =============================
+   TESTIMONIALS
+============================= */
+
+.testimonials__title {
+    font-size: 1.6em;
+    margin-bottom: 1em;
+}
+
+.testimonials__quote {
+    margin-bottom: 0.2em;
+    font-style: italic;
+}
+
+.testimonials__author {
+    margin-bottom: 1em;
+    font-weight: bold;
+    color: #444;
+}
+
+/* =============================
+   CONTACT
+============================= */
+
+.contact__title {
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
+}
+
+.contact__label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact__textarea {
+    resize: none;
+}
+
+.button--secondary {
+    background-color: #b9b6cf;
+    color: #2e0520;
+    margin-top: 10px;
+}
+
+.button--secondary:hover {
+    background-color: #a09eb4;
+    font-weight: bold;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+.footer__link {
+    color: #efedff;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: #cfcaf5;
+}
