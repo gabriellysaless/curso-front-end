@@ -1,0 +1,18 @@
+@use 'variaveis';
+
+.footer {
+    font-size: 12px;
+    background-color: variaveis.$cor-primaria;
+    color: variaveis.$cor-texto-primario;
+    padding: 5px;
+    text-align: center;
+
+    &__link {
+        color: variaveis.$cor-background-button;
+        text-decoration: none;
+
+        &:hover {
+            color: variaveis.$cor-background-button-h;
+        }
+    }
+}

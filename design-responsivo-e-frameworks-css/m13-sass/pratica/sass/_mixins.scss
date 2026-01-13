@@ -1,0 +1,7 @@
+@use 'variaveis';
+
+@mixin titulo-section-padrao {
+    font-size: variaveis.$tam-fonte-padrao;
+    margin-bottom: variaveis.$margin-padrao;
+}
+

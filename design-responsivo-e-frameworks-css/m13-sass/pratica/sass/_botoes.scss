@@ -1,0 +1,19 @@
+@use 'variaveis';
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: variaveis.$cor-background-button;
+    color: variaveis.$cor-texto-button;
+
+    &:hover {
+    background-color: variaveis.$cor-background-button-h;
+    font-weight: bold;
+    }
+}
