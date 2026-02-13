@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Estilo Livre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="./img/ChatGPT Image 10 de fev. de 2026, 14_15_32.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Estilo Livre
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="text-center py-5 bg-light">
+        <div class="container">
+            <h1 class="fw-bold mb-4">
+                A melhor barbearia da região!
+            </h1>
+
+            <img src="./img/banner.png" class="img-fluid rounded mb-4" alt="Banner Barbearia">
+
+            <button class="btn btn-dark px-4">
+                Saiba mais!
+            </button>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="bg-dark text-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-uppercase fw-bold">Sobre Nós</h2>
+            <p class="text-center">
+                A <strong>Estilo Livre Barbearia</strong> nasce para homens que valorizam personalidade, atitude e
+                autenticidade. Aqui, cada corte e cada barba são pensados para refletir o estilo único de cada cliente —
+                sem padrões engessados, sem rótulos.
+                <br><br>
+                Unimos técnica apurada, atendimento próximo e um ambiente moderno com toque clássico, criando uma
+                experiência que vai além do visual: é sobre confiança, presença e identidade.
+                <br><br>
+                Na Estilo Livre, seu estilo não segue tendências — ele dita o ritmo.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Serviços -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-uppercase fw-bold">Nossos Serviços</h2>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Corte">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Corte de Cabelo</h5>
+                            <p class="card-text">Cortes modernos, clássicos ou personalizados.</p>
+                            <a href="#" class="btn btn-dark">Quero ir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Barba">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Barba</h5>
+                            <p class="card-text">Modelagem e acabamento com navalha.</p>
+                            <a href="#" class="btn btn-dark">Quero ir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Combo">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Corte + Barba</h5>
+                            <p class="card-text">Combo completo com acabamento premium.</p>
+                            <a href="#" class="btn btn-dark">Quero ir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Hidratação">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Hidratação</h5>
+                            <p class="card-text">Tratamento para fortalecer e dar brilho.</p>
+                            <a href="#" class="btn btn-dark">Quero ir</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="bg-dark text-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-uppercase fw-bold">
+                O que nossos clientes dizem
+            </h2>
+
+            <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner text-center">
+
+                    <div class="carousel-item active">
+                        <div class="p-4">
+                            <p class="fs-5 fst-italic">
+                                "Melhor barbearia da região! Atendimento impecável."
+                            </p>
+                            <h5 class="fw-bold mt-3">— João Silva</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="p-4">
+                            <p class="fs-5 fst-italic">
+                                "Ambiente confortável e profissionais atenciosos."
+                            </p>
+                            <h5 class="fw-bold mt-3">— Carlos Mendes</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="p-4">
+                            <p class="fs-5 fst-italic">
+                                "Sempre saio renovado. Corte impecável!"
+                            </p>
+                            <h5 class="fw-bold mt-3">— Rafael Souza</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Agende já um horário</h2>
+
+            <form class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label class="form-label">Nome</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mensagem</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-dark w-100">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
