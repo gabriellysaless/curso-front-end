@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sky-500: oklch(0.7 0.1751 234.93);
+  --color-sky-700: oklch(0.5673 0.1455 234.93);
+}
