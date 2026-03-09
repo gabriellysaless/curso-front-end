@@ -11,7 +11,7 @@ function Tarefa ({texto}) {
 
     return (
         <li><input type="checkbox" onChange={alternarConcluida}/> <span className={ concluida ? 'concluida' : ''}>{texto}</span> <button>Remover</button></li>
-    )
+    ) /* texto dentro de span (elemento) para poder colocar uma classe */
 }
 
 export default Tarefa;
