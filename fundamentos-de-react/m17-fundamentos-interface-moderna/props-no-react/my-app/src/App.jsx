@@ -1,28 +1,42 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Tarefa from "./components/Tarefa"
+
+const API_URL = 'https://crudcrud.com/api/8106c2345c3a44448d81c98f84f6e9e7/TAREFAS'
 
 function App() {
 
-  const [tarefas, setTarefas] = useState ([
-    {id: 1, texto: "Estudar React"},
-    {id: 2, texto: "Fazer compras"},
-    {id: 3, texto: "Responder e-mails"}
-  ]);
-
+  const [tarefas, setTarefas] = useState ([]);
   const [novaTarefa, setNovaTarefa] = useState('');
 
+  //Buscar os dados na API assim que o componente for montado
+  useEffect(() => {
+    fetch(API_URL)
+    .then(res => res.json())
+    .then(dados => setTarefas(dados))
+    .catch(error => console.error("Erro ao buscar tarefas:", error))
+  }, [])
+
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); /* impede recarregar a página */
 
     if(novaTarefa.trim() === '') return;
 
-    const novoId = tarefas[tarefas.length - 1].id + 1;
-    const nova = {
-      id: novoId,
-      texto: novaTarefa.trim()
-    }
-    setTarefas([...tarefas, nova]);
-    setNovaTarefa(''); /* apagar texto do input */
+    //Envio da nova tarefa para a API
+
+    const nova = {texto: novaTarefa.trim()}
+    fetch(API_URL, {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(nova)
+    })
+    .then(res => res.json())
+    .then(tarefaCriada => {
+      setTarefas([...tarefas, tarefaCriada]);
+      setNovaTarefa(''); /* apagar texto do input */
+
+    })
+    .catch(error => console.error("Erro ao buscar tarefas:", error))
+
   }
 
   return (
@@ -36,7 +50,7 @@ function App() {
       <button type="submit">Adicionar</button>
     </form>
     <ul>
-      {tarefas.map(tarefa => <Tarefa key={tarefa.id} texto={tarefa.texto}/> )} {/* as chaves são para colocar uma expressão/código JS dentro de JSX */}
+      {tarefas.map(tarefa => <Tarefa key={tarefa._id} texto={tarefa.texto}/> )} {/* as chaves são para colocar uma expressão/código JS dentro de JSX */}
     </ul>
   </>
 )
