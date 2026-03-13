@@ -14,7 +14,7 @@ function App() {
     .then(res => res.json())
     .then(dados => setTarefas(dados))
     .catch(error => console.error("Erro ao buscar tarefas:", error))
-  }, [])
+  }, []) // '[]' vazio, executa somente uma vez, ou seja, somente quando apertar o botao
 
   const handleSubmit = (e) => {
     e.preventDefault(); /* impede recarregar a página */
