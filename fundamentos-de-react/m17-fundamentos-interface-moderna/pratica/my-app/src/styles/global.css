@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box; /* faz o width incluir padding e border */
+}
+
+.container-produtos{ /* Coloca os itens lado a lado e quebra linha quando precisar */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border: 1px 1px black;
+}
+
+h1{
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+
+    background-color: white;
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+form input{
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 10px;
+
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+form button{
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: rgba(0, 93, 180, 0.800);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: rgba(1, 71, 136, 0.8);
+}

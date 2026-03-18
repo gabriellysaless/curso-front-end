@@ -1,5 +1,6 @@
 .produto-card{
-    width: 220px;
+    width: 100%;
+    max-width: 220px;
     padding: 10px;
     border-radius: 12px;
     margin: 10px;
@@ -16,6 +17,7 @@
 
 .produto-imagem{
     width: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço definido SEM deformar */
     border-radius: 8px;
 }
 
