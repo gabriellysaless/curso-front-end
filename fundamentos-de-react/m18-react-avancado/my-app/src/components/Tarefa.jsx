@@ -5,13 +5,6 @@ function Tarefa ({texto}) {
 
     const [concluida, setConcluida] = useState(false);
 
-        /* Teste de memoização para conferir se o app está recarregando várias vezes desnecessáriamente */
-        useEffect(() => {
-            console.log("Componente executado tarefa.", texto);
-        }, [])
-
-        console.log("Componennte tarefa executado.", texto)
-
     const alternarConcluida = () => {
         setConcluida(!concluida);
     }
