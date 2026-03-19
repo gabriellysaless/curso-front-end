@@ -55,7 +55,7 @@ function ListaTarefas() {
         </form>
         <ul>
         {tarefas
-          .filter(tarefa => tarefa.usuario === usuario.nome)
+          .filter(tarefa => tarefa.usuario === usuario.nome) /* faz um filtro e só mostra as atividades que cada usuário digitar */
         .map(tarefa => <Tarefa key={tarefa._id} texto={tarefa.texto}/> )} {/* as chaves são para colocar uma expressão/código JS dentro de JSX */}
         </ul>
     </>
