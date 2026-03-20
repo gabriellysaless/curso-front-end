@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+form input {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #797979;
+    border-radius: 8px;
+    
+}
+
+form select {
+    display: block;
+    width: 180px;
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid #797979;
+}
+
+form button {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #00000081;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(34, 160, 34, 0.650);
+}
+
+form button:hover {
+    background-color: rgba(31, 138, 31, 0.70);
+}
+
+ul {
+    padding: 0;
+}

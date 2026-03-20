@@ -1,0 +1,25 @@
+.tarefaConcluida {
+    color: gray;
+    text-decoration: line-through;
+}
+
+li {
+    list-style-type: none;
+}
+
+li input {
+    margin: 0 5px;
+}
+
+li button {
+    margin: 0 5px;
+    padding: 0 5px;
+    border: 1px solid #00000081;
+    border-radius: 5px;
+    background-color: rgba(153, 47, 47, 0.61);
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: rgba(153, 47, 47, 0.723);
+}
