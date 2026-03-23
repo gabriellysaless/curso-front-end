@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export const TarefasContext = createContext();
 
-const API_URL = 'https://crudcrud.com/api/f86a84a98c2e49539955910cbf48d888/tarefas'
+const API_URL = 'https://crudcrud.com/api/1f57c2389832447887459031f92c268e/tarefas'
 
 export function TarefasProvider({children}) {
       const [tarefas, setTarefas] = useState([]);
