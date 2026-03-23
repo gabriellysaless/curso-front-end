@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from "react"
-import Tarefa from "./Tarefa"
-import { useInput } from "../hooks/useInput";
-import { UserContext } from "../contexts/UserContext";
+import Tarefa from "../Tarefa/Tarefa"
+import { useInput } from "../../hooks/useInput";
+import { UserContext } from "../../contexts/UserContext";
+import styles from "./ListaTarefas.module.css"
 
-export const API_URL = 'https://crudcrud.com/api/e177440b73e4408697ba26901812c878/tarefas'
+const API_URL = 'https://crudcrud.com/api/e177440b73e4408697ba26901812c878/tarefas'
 
 function ListaTarefas() {
 
@@ -60,19 +61,19 @@ function ListaTarefas() {
 
   return (
     <>
-        <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Digite uma nova tarefa"
+        <form className={styles.form} onSubmit={handleSubmit}>
+        <input className={styles.input} type="text" placeholder="Digite uma nova tarefa"
             value={tarefa.valor}
             onChange={tarefa.onChange}
         />
-        <button type="submit">Adicionar</button>
+        <button className={styles.button} type="submit">Adicionar</button>
         </form>
-        <ul>
+        <ul className={styles.list}>
           {tarefas
             .filter(tarefa => tarefa.usuario === usuario.nome) /* faz um filtro e só mostra as atividades que cada usuário digitar */
           .map(tarefa => 
             <Tarefa 
-              key={tarefa._id} 
+              key={tarefa._id} /* key: usado no React interno */
               texto={tarefa.texto}
               id={tarefa._id}
               onDelete={deletarTarefa}

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import ListaTarefas from "./components/ListaTarefas"
+import { useState } from "react"
+import ListaTarefas from "./components/ListaTarefas/ListaTarefas"
 import Login from "./components/Login";
 import { UserContext } from "./contexts/UserContext";
 

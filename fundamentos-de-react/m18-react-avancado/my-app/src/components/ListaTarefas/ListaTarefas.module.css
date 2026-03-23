@@ -1,0 +1,31 @@
+/* Estilo via module.css */
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}    
+
+.input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}    
+
+.button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}    
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
