@@ -3,7 +3,7 @@ import Tarefa from "./Tarefa"
 import { useInput } from "../hooks/useInput";
 import { UserContext } from "../contexts/UserContext";
 
-const API_URL = 'https://crudcrud.com/api/5440303fe02944d4aee3040ef6b30ab2/tarefas'
+export const API_URL = 'https://crudcrud.com/api/e177440b73e4408697ba26901812c878/tarefas'
 
 function ListaTarefas() {
 
@@ -44,6 +44,20 @@ function ListaTarefas() {
 
   }
 
+  /* Função para excluir tarefa */
+  const deletarTarefa = (id) => {
+    fetch(`${API_URL}/${id}`, {
+      method: "DELETE",
+    })
+    .then(() => {
+      /* Atualiza o estado removendo a tarefa deletada */
+      setTarefas(prev =>
+          prev.filter(t => t._id !== id) /* prev: estado anterior do setTarefas(tarefas) */
+      );
+    })
+    .catch(error => console.log("Erro ao deletar tarefa:", error));
+  };
+
   return (
     <>
         <form onSubmit={handleSubmit}>
@@ -54,9 +68,16 @@ function ListaTarefas() {
         <button type="submit">Adicionar</button>
         </form>
         <ul>
-        {tarefas
-          .filter(tarefa => tarefa.usuario === usuario.nome) /* faz um filtro e só mostra as atividades que cada usuário digitar */
-        .map(tarefa => <Tarefa key={tarefa._id} texto={tarefa.texto}/> )} {/* as chaves são para colocar uma expressão/código JS dentro de JSX */}
+          {tarefas
+            .filter(tarefa => tarefa.usuario === usuario.nome) /* faz um filtro e só mostra as atividades que cada usuário digitar */
+          .map(tarefa => 
+            <Tarefa 
+              key={tarefa._id} 
+              texto={tarefa.texto}
+              id={tarefa._id}
+              onDelete={deletarTarefa}
+            /> 
+          )}
         </ul>
     </>
     )

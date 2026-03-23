@@ -1,7 +1,7 @@
-import { useState, useEffect, memo } from "react";
+import { useState, memo } from "react";
 import './Tarefa.css'
 
-function Tarefa ({texto}) {
+function Tarefa ({texto, id, onDelete}) {
 
     const [concluida, setConcluida] = useState(false);
 
@@ -10,8 +10,13 @@ function Tarefa ({texto}) {
     }
 
     return (
-        <li><input type="checkbox" onChange={alternarConcluida}/> <span className={ concluida ? 'concluida' : ''}>{texto}</span> <button>Remover</button></li>
-    ) /* texto dentro de span (elemento) para poder colocar uma classe */
+        <li>
+            <input type="checkbox" onChange={alternarConcluida}/> <span className={ concluida ? 'concluida' : ''}>
+                {texto}
+            </span>
+            <button onClick={() => onDelete(id)}>Remover</button>
+        </li>
+    ) 
 }
 
 export default memo(Tarefa); /* memo => evita renderização de um componente se as props não mudam */
