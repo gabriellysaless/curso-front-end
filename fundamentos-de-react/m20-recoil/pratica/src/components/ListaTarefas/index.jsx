@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { tarefasState, filtroState } from "../../atoms/tarefasAtoms";
+import { tarefasFiltradasState } from "../../selectors/tarefasSelector";
 import Tarefa from "../Tarefa";
 import { Formulario, Input, Botao, Lista, Filtro } from "./styles.jsx";
 
@@ -6,9 +9,11 @@ const API_URL = "https://crudcrud.com/api/a5df8ec065054d0e9f4d29df4670fb13/taref
 
 function ListaTarefas() {
 
-    const [tarefas, setTarefas] = useState([]);
+    const [tarefas, setTarefas] = useRecoilState(tarefasState);
+    const [filtro, setFiltro] = useRecoilState(filtroState);
+    const tarefasFiltradas = useRecoilValue(tarefasFiltradasState);
+
     const [novaTarefa, setNovaTarefa] = useState("");
-    const [filtro, setFiltro] = useState("todas");
 
     /* GET */
     useEffect(() => {
@@ -101,23 +106,16 @@ function ListaTarefas() {
                 </Filtro>
             </Formulario>
             <Lista>
-                {tarefas
-                    .filter(tarefa => {
-                            if (filtro === "concluidas") return tarefa.concluida;
-                            if (filtro === "pendentes") return !tarefa.concluida;
-                            return true;
-                    })
-                    .map((tarefa) => (
-                        <Tarefa 
-                                key={tarefa._id} 
-                                texto={tarefa.texto}
-                                id={tarefa._id}
-                                concluida={tarefa.concluida}
-                                onDelete={deletarTarefa}
-                                onToggle={toggleConcluida}
-                        />
-                    ))
-                }
+                {tarefasFiltradas.map((tarefa) => (
+                    <Tarefa 
+                        key={tarefa._id} 
+                        texto={tarefa.texto}
+                        id={tarefa._id}
+                        concluida={tarefa.concluida}
+                        onDelete={deletarTarefa}
+                        onToggle={toggleConcluida}
+                    />
+                ))}
             </Lista>
         </>
     )
