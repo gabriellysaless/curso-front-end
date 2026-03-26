@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { tarefasState, filtroState, novaTarefaState } from "../../atoms/tarefasAtoms";
 import { tarefasFiltradasState } from "../../selectors/tarefasSelector";
