@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { tarefasState, filtroState } from "../../atoms/tarefasAtoms";
+import { tarefasState, filtroState, novaTarefaState } from "../../atoms/tarefasAtoms";
 import { tarefasFiltradasState } from "../../selectors/tarefasSelector";
 import Tarefa from "../Tarefa";
 import { Formulario, Input, Botao, Lista, Filtro } from "./styles.jsx";
@@ -13,7 +13,7 @@ function ListaTarefas() {
     const [filtro, setFiltro] = useRecoilState(filtroState);
     const tarefasFiltradas = useRecoilValue(tarefasFiltradasState);
 
-    const [novaTarefa, setNovaTarefa] = useState("");
+    const [novaTarefa, setNovaTarefa] = useRecoilState(novaTarefaState);
 
     /* GET */
     useEffect(() => {

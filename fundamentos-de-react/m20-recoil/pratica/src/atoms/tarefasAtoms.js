@@ -11,3 +11,8 @@ export const filtroState = atom({
     key: "filtroState",
     default: "todas"
 });
+
+export const novaTarefaState = atom({ 
+    key: "novaTarefaState",
+    default: []
+});
