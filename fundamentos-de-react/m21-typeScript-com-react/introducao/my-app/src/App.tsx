@@ -1,13 +1,16 @@
 
 import './App.css'
-import Header from './components/Header'
+import FormularioReclamacao from './components/FormularioReclamacao'
 
 function App() {
 
+  const notification = () => {
+    console.log("OK");
+  }
 
   return (
     <>
-      <Header texto= "Olá mundo!"/>
+      <FormularioReclamacao aoEnviar= {notification}/>
     </>
   )
 }
