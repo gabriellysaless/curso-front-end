@@ -1,21 +1,29 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import FormularioReclamacao from './components/FormularioReclamacao';
 import type { Reclamacao } from './tipos/Reclamacao';
 import ListaReclamacoes from './components/ListaReclamacoes';
+import axios from 'axios';
+
+const API_URL = "https://crudcrud.com/api/036d43e804a44af5b61a7542404e5b8e/reclamacoes";
 
 function App() {
 
   const [reclamacoes, setReclamacoes] = useState<Reclamacao[]>([]);
 
   const adicionarReclamacao =  (dados: Reclamacao) => {
-    const nova: Reclamacao = {
-      ...dados,
-      id: 1
-    }
-    setReclamacoes(prev => [...prev, nova]);
+
+    axios
+    .post<Reclamacao>(API_URL, dados)
+    .then(resposta => setReclamacoes(prev => [...prev, resposta.data]))
   }
+
+  useEffect (() => {
+    axios
+    .get<Reclamacao[]>(API_URL)
+    .then(resposta => setReclamacoes(resposta.data))
+  }, []);
 
   return (
     <>

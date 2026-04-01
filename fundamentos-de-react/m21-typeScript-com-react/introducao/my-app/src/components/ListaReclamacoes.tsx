@@ -12,7 +12,7 @@ const ListaReclamacoes = ({reclamacoes}: Props) => {
     return(
         <div>
             {
-                reclamacoes.map(item => (<ItemReclamacao key={item.id} reclamacao={item}/>))
+                reclamacoes.map(item => (<ItemReclamacao key={item._id} reclamacao={item}/>))
             }
         </div>
     )
