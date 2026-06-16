@@ -1,12 +1,16 @@
+import Link from "next/link";
+
 const Header = () => {
     return(
         <header>
-            <h1>Cinelista</h1>
+            <Link href="/">
+                <h1>Cinelista</h1>
+            </Link>
             <nav>
-                <a href="/">Início</a>
-                <a href="/">Em alta</a>
-                <a href="/">Populares</a>
-                <a href="/">Top Filmes</a>
+                <Link href="/">Início</Link>
+                <Link href="/filmes/em-alta">Em alta</Link>
+                <Link href="/filmes/populares">Populares</Link>
+                <Link href="/filmes/top-filmes">Top Filmes</Link>
             </nav>
         </header>
     );
