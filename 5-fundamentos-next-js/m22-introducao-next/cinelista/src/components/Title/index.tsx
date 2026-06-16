@@ -1,10 +1,12 @@
+import styles from "./Title.module.css";
+
 type Props = {
     title: string
 }
 
 const Title = ({title} : Props) => {
     return (
-        <h2>{title}</h2>
+        <h1 className={styles.title}>{title}</h1>
     );
 }
 export default Title;

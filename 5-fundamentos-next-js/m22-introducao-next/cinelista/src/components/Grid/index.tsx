@@ -1,5 +1,6 @@
 import { Filme } from "@/types/types";
 import Card from "../Card";
+import styles from "./Grid.module.css";
 
 type Props = {
     filmes: Filme[]
@@ -7,7 +8,7 @@ type Props = {
 
 const Grid = ({filmes} : Props) => {
     return (
-        <section>
+        <section className={styles.grid}>
             {filmes.map(filme => <Card key={filme.id} filme={filme}/>)}
         </section>
     );
