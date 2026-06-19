@@ -1,0 +1,32 @@
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -2.4px;
+  margin-bottom: 20px;
+}
+
+.main {
+  font-size: 18px;
+  max-width: 800px;
+}
+
+.main p {
+  margin-bottom: 10px;
+}
+
+.main a {
+  color: #1f6888;
+  text-decoration: none;
+}
+
+.main a:hover {
+  font-weight: 600;
+}
+
