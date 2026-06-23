@@ -1,9 +1,19 @@
+import Grid from "@/components/Grid";
 import Title from "@/components/Title"
+import { getNowPlaying } from "@/lib/api/tmdb";
 
-const FilmesEmAlta = () => {
+export const dynamic = 'force-dynamic';
+/* 
+    Força o comportamento dinâmico, para não usar o cash e sempre fazer chamada na API
+*/
+
+
+const FilmesEmAlta = async () => {
+    const filmes = await getNowPlaying();
     return(
         <>
             <Title title="Filmes em Alta" />
+            <Grid filmes={filmes}/>
         </>
     );
 }

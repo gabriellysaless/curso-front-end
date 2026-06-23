@@ -1,7 +1,7 @@
-import { filmes } from "@/lib/filmes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./DetalheFilme.module.css";
+import { getMovieDetails } from "@/lib/api/tmdb";
 
 type Props = {
     params: Promise<{
@@ -11,14 +11,14 @@ type Props = {
 
 const DetalheFilme = async ({params}: Props) => {
 const { id } = await params
+// Fazer chamada da API
+const detalhe = await getMovieDetails(id)
 
-const filme = filmes.find((filme) => filme.id == id)
-
-if(!filme){
+if(!detalhe){
     notFound();
 }
 
-const { title, image, description } = filme
+const { title, poster_path, overview } = detalhe
 
     return (
         <div className={styles.details}>
@@ -26,11 +26,11 @@ const { title, image, description } = filme
                 <Link href="/" className={styles.voltar}>Voltar</Link>
                 <section>
                     <figure>
-                        <img className={styles.image} src={image} alt={`Poster do filme ${title}`} />
+                        <img className={styles.image} src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`} alt={`Poster do filme ${title}`} />
                     </figure>
                     <article className={styles.info}>
                     <h2>{title}</h2>
-                    <p>{description}</p>
+                    <p>{overview}</p>
                 </article>
                 </section>
             </div>
