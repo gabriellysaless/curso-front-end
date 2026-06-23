@@ -4,7 +4,10 @@ import { getNowPlaying } from "@/lib/api/tmdb";
 
 export const dynamic = 'force-dynamic';
 /* 
-    Força o comportamento dinâmico, para não usar o cash e sempre fazer chamada na API
+    Força a renderização dinâmica.
+    A página é gerada a cada requisição.
+    Não utiliza o cache de página do Next.js.
+    Equivale ao comportamento do antigo getServerSideProps do pages router.
 */
 
 

@@ -4,8 +4,10 @@ import { getTopRated } from "@/lib/api/tmdb";
 
 export const dynamic = 'force-static';
 /* 
-    Página estática é gerada e uma nova só é gerada novamente no próximo build
-    Usado para páginas que quase não sofrem mudanças
+    Força a renderização estática.
+    A página é gerada durante o build.
+    Depois disso, o conteúdo só será atualizado em um novo build.
+    Ideal para conteúdos que raramente mudam.
 */
 
 const TopFilmes = async () => {

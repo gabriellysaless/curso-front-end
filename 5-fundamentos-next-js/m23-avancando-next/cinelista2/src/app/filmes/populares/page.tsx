@@ -4,8 +4,12 @@ import { getPopular } from "@/lib/api/tmdb";
 
 export const revalidate = 60; // atualiza a cada 60s
 /* 
-    Meio termo:
-    Faz chamada na API, mas não chame toda hora, ou seja, guarde um cash por determinado tempo
+    Incremental Static Regeneration (ISR).
+
+    A página é gerada estaticamente e armazenada em cache.
+    Durante 60 segundos o Next.js serve a versão em cache.
+    Após esse período, uma nova versão pode ser gerada em segundo plano
+    quando houver uma nova requisição.
 */
 
 const FilmesPopulares = async () => {
